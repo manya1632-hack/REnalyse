@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Poppins } from "next/font/google";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${poppins.variable} antialiased font-sans bg-[#F8F9FC]`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
